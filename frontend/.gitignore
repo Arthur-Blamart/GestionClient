@@ -1,0 +1,10 @@
+
+# Ignoring .env file
+.env
+
+# Node.js dependencies
+node_modules
+dist
+
+# Editor directories and files
+.vscode/*
