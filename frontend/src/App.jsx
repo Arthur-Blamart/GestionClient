@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import AddClientForm from './AddClientForm';
+import AddClientForm from './clients/AddClientForm';
+import ClientsList from './clients/ClientList';
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
       <div>
         <h1>Mon Application Client</h1>
         <AddClientForm />
+        <h2>Liste des clients</h2>
+        <ClientsList />
       </div>
     </>
   )

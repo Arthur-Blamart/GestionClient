@@ -23,7 +23,7 @@ export default function AddClientForm() {
 
     console.log(clientData);
 
-    const response = await fetch('http://localhost:3000/clients', {
+    const response = await fetch('http://localhost:3000/clients/addClient', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(clientData)

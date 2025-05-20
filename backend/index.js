@@ -18,7 +18,7 @@ db.run(`
   )
 `);
 
-app.post('/clients', (req, res) => {
+app.post('/clients/addClient', (req, res) => {
   const { nom, email } = req.body;
 
   if (!nom || !email) {
@@ -32,6 +32,18 @@ app.post('/clients', (req, res) => {
     }
 
     res.status(201).json({ id: this.lastID, nom, email });
+  });
+});
+
+app.get('/clients/getClients', (req, res) => {
+
+  const query = 'SELECT * FROM clients';
+  db.all(query, function (err, rows) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json(rows);
   });
 });
 
