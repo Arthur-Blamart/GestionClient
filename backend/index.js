@@ -35,6 +35,18 @@ app.post('/clients', (req, res) => {
   });
 });
 
+app.get('/toto', (req, res) => {
+
+  const query = 'SELECT * FROM clients';
+  db.all(query, function (err, rows) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json(rows);
+  });
+});
+
 app.listen(port, () => {
   console.log(`✅ Serveur backend démarré sur http://localhost:${port}`);
 });
