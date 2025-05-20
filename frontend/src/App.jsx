@@ -12,11 +12,13 @@ import ClientsList from './pages/ClientList';
 function App() {
 
   return (
+    <div className="app-container">
     <Routes>
       <Route path="/" element={<Acceuil />} />
       <Route path="/ajout-client" element={<AddClientForm />} />
       <Route path="/liste-clients" element={<ClientsList />} />
     </Routes>
+    </div>
   )
 }
 
