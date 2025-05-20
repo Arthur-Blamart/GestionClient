@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+        "install" : "npm install --prefix backend && npm install --prefix frontend",
         "dev": "concurrently \"npm --prefix backend start\" \"npm --prefix frontend run dev\""
   },
   "repository": {
@@ -18,5 +19,10 @@
   "homepage": "https://github.com/Arthur-Blamart/GestionClient#readme",
   "devDependencies": {
     "concurrently": "^9.1.2"
-  }
+  },
+  "private": true,
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend"
+  ]
 }
