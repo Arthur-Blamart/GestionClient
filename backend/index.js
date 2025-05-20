@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 // Middleware pour autoriser les requêtes cross-origin et parser le JSON
 app.use(cors({
-  origin:'https://gestionclient-backend-production.up.railway.app'
+  origin:'https://gestionclient-frontend-production.up.railway.app'
 }));
 app.use(express.json());
 
