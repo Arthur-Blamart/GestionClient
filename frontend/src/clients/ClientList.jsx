@@ -28,9 +28,14 @@ export default function ClientsList() {
     <div>
       <h2>Liste des clients</h2>
       <ul>
-        {clients.map(({ id, nom, email }) => (
+        {clients.map(({ id, entreprise, nom, prenom, email, telephone, commentaire }) => (
           <li key={id}>
-            {nom} — {email}
+            <strong>{nom}</strong>
+            {prenom && ` ${prenom}`}<br />
+            {entreprise && <>Entreprise : {entreprise}<br /></>}
+            {email && <>Email : {email}<br /></>}
+            {telephone && <>Téléphone : {telephone}<br /></>}
+            {commentaire && <>Commentaire : {commentaire}<br /></>}
           </li>
         ))}
       </ul>
