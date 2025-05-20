@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import AddClientForm from './AddClientForm';
-import ClientsList from './ClientList';
+import AddClientForm from './clients/AddClientForm';
+import ClientsList from './clients/ClientList';
 
 function App() {
 

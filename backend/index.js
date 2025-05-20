@@ -18,7 +18,7 @@ db.run(`
   )
 `);
 
-app.post('/clients', (req, res) => {
+app.post('/clients/addClient', (req, res) => {
   const { nom, email } = req.body;
 
   if (!nom || !email) {
@@ -35,7 +35,7 @@ app.post('/clients', (req, res) => {
   });
 });
 
-app.get('/toto', (req, res) => {
+app.get('/clients/getClients', (req, res) => {
 
   const query = 'SELECT * FROM clients';
   db.all(query, function (err, rows) {
