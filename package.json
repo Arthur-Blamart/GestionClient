@@ -1,0 +1,22 @@
+{
+  "name": "gestionclients",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+        "dev": "concurrently \"npm --prefix backend start\" \"npm --prefix frontend run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arthur-Blamart/GestionClient.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arthur-Blamart/GestionClient/issues"
+  },
+  "homepage": "https://github.com/Arthur-Blamart/GestionClient#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
