@@ -1,6 +1,6 @@
 
 # Ignoring .env file
-.env
+.env.production
 
 # Node.js dependencies
 node_modules

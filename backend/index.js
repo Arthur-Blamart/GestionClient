@@ -6,7 +6,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware pour autoriser les requêtes cross-origin et parser le JSON
-app.use(cors());
+app.use(cors({
+  origin:'https://gestionclient-backend-production.up.railway.app'
+}));
 app.use(express.json());
 
 // Connexion à la base de données SQLite (fichier clients.db)
