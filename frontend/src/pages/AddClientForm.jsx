@@ -22,7 +22,7 @@ export default function AddClientForm() {
       commentaire: commentaire || null
     };
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/clients/getClients`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/clients/addClient`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(clientData)
