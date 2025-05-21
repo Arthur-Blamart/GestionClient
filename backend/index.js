@@ -12,7 +12,7 @@ const allowedOrigins = [
 
 // Middleware pour autoriser les requêtes cross-origin et parser le JSON
 app.use(cors({
-  origin:allowedOrigins
+  origin:"*"
 }));
 app.use(express.json());
 
