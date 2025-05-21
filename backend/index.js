@@ -30,6 +30,12 @@ db.run(`
   else console.log("✅ Table clients OK");
 });
 
+//Route de test pour vérifier que le serveur fonctionne
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
+
 // Route POST pour ajouter un client
 app.post('/clients/addClient', (req, res) => {
   const { entreprise, nom, prenom, email, telephone, commentaire } = req.body;
