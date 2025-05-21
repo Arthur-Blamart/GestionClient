@@ -5,9 +5,14 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express();
 const port = process.env.PORT || 3000;
 
+const allowedOrigins = [
+  'https://monfrontend-production.up.railway.app',
+  'http://localhost:3000'
+];
+
 // Middleware pour autoriser les requêtes cross-origin et parser le JSON
 app.use(cors({
-  origin:'*'
+  origin:allowedOrigins
 }));
 app.use(express.json());
 
