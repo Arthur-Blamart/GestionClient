@@ -74,6 +74,6 @@ app.get('/clients/getClients', (req, res) => {
 });
 
 // Démarrage du serveur sur le port 3000
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`✅ Serveur backend démarré sur le port : ${port}`);
 });
