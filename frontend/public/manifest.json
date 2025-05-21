@@ -1,0 +1,21 @@
+{
+  "short_name": "GestionClient",
+  "name": "Gestion Client Application",
+  "icons": [
+    {
+      "src": "/assets/logoAppli.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/logoAppli.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0078D7",
+  "orientation": "portrait"
+}
