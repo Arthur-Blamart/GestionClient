@@ -25,7 +25,10 @@ db.run(`
     telephone TEXT,
     commentaire TEXT
   )
-`);
+`,(err) => {
+  if (err) console.error("Erreur création table :", err.message);
+  else console.log("✅ Table clients OK");
+});
 
 // Route POST pour ajouter un client
 app.post('/clients/addClient', (req, res) => {
