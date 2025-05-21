@@ -3,7 +3,7 @@ const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 // Middleware pour autoriser les requêtes cross-origin et parser le JSON
 app.use(cors({
@@ -69,5 +69,5 @@ app.get('/clients/getClients', (req, res) => {
 
 // Démarrage du serveur sur le port 3000
 app.listen(port, () => {
-  console.log(`✅ Serveur backend démarré sur http://localhost:${port}`);
+  console.log(`✅ Serveur backend démarré sur le port : ${port}`);
 });
