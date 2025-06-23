@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function AddClientForm() {
   const [entreprise, setEntreprise] = useState('');
@@ -44,71 +43,71 @@ export default function AddClientForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="container mt-4 p-4 border rounded shadow-sm bg-light" style={{maxWidth: 500}}>
-      <h2 className="mb-4">Ajouter un client</h2>
-      <div className="mb-3">
-        <label className="form-label">Entreprise</label>
+    <form onSubmit={handleSubmit} className="form-container">
+      <h2 className="form-title">Ajouter un client</h2>
+      <div className="form-group">
+        <label className="form-label-custom">Entreprise</label>
         <input
           type="text"
-          className="form-control"
+          className="form-input"
           placeholder="Entreprise"
           value={entreprise}
           onChange={(e) => setEntreprise(e.target.value)}
           required
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Nom</label>
+      <div className="form-group">
+        <label className="form-label-custom">Nom</label>
         <input
           type="text"
-          className="form-control"
+          className="form-input"
           placeholder="Nom"
           value={nom}
           onChange={(e) => setNom(e.target.value)}
           required
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Prénom</label>
+      <div className="form-group">
+        <label className="form-label-custom">Prénom</label>
         <input
           type="text"
-          className="form-control"
+          className="form-input"
           placeholder="Prénom"
           value={prenom}
           onChange={(e) => setPrenom(e.target.value)}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Email</label>
+      <div className="form-group">
+        <label className="form-label-custom">Email</label>
         <input
           type="email"
-          className="form-control"
+          className="form-input"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Téléphone</label>
+      <div className="form-group">
+        <label className="form-label-custom">Téléphone</label>
         <input
           type="tel"
-          className="form-control"
+          className="form-input"
           placeholder="Téléphone"
           value={telephone}
           onChange={(e) => setTelephone(e.target.value)}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Commentaire</label>
+      <div className="form-group">
+        <label className="form-label-custom">Commentaire</label>
         <textarea
-          className="form-control"
+          className="form-input"
           placeholder="Commentaire"
           value={commentaire}
           onChange={(e) => setCommentaire(e.target.value)}
         />
       </div>
-      <button type="submit" className="btn btn-primary w-100">Ajouter</button>
-      {message && <div className="alert alert-info mt-3">{message}</div>}
+      <button type="submit" className="form-btn">Ajouter</button>
+      {message && <div className="form-alert">{message}</div>}
     </form>
   );
 }

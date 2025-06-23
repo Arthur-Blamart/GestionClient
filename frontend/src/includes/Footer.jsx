@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Footer = () => (
-    <footer className="bg-dark py-3 mt-auto">
-        <div className="container text-center text-light">
+    <footer className="footer-bg footer-padding footer-mt" style={{ backgroundColor: 'red' }}>
+        <div className="footer-container footer-text-center footer-text-light">
             <div>
-                Contact : <a href="mailto:arthurblamart@gmail.com" className="text-light">arthurblamart@gmail.com</a>
+                Contact : <a href="mailto:arthurblamart@gmail.com" className="footer-link">arthurblamart@gmail.com</a>
             </div>
             <div>
                 &copy; {new Date().getFullYear()} Gestion Clients
