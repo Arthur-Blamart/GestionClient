@@ -2,6 +2,8 @@
 
 Ce projet est une application web permettant de gérer une liste de clients pour une entreprise. Il est structuré en deux parties : un backend Node.js/Express avec une base de données SQLite, et un frontend React utilisant Vite.
 
+> **Le style de l’interface est entièrement géré avec [Tailwind CSS](https://tailwindcss.com/).**
+
 ## Structure du projet
 
 ```
@@ -49,7 +51,7 @@ Ce script installera les dépendances pour le backend et le frontend.
 ## Fonctionnalités
 
 - **Backend** : API REST pour ajouter et lister les clients (stockés en SQLite).
-- **Frontend** : Interface utilisateur pour ajouter des clients via un formulaire.
+- **Frontend** : Interface utilisateur pour ajouter des clients via un formulaire, stylisée avec Tailwind CSS.
 
 ## Lancement
 
