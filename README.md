@@ -64,3 +64,7 @@ npm run dev
 Ce script démarre automatiquement le serveur Express (backend) et l’application React (frontend).
 
 > L’application sera accessible sur [http://localhost:5173](http://localhost:5173) (frontend) et l’API sur [http://localhost:3000](http://localhost:3000) (backend).
+
+## Documentation de l’API
+
+Une documentation interactive Swagger UI est disponible pour le backend à l’adresse [http://localhost:3000/api-docs](http://localhost:3000/api-docs). Cette documentation vous permettra de tester facilement les différentes routes de l’API.
