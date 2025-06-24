@@ -1,13 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
+const swaggerUI = require("swagger-ui-express");
 
 const app = express();
+
+const swaggerSpec = require("./swagger");
 const port = process.env.PORT || 3000;
 
 // Middleware pour autoriser les requêtes cross-origin et parser le JSON
 app.use(cors());
 app.use(express.json());
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec))
 
 // Connexion à la base de données SQLite (fichier clients.db)
 const db = new sqlite3.Database('clients.db');
