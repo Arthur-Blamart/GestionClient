@@ -30,7 +30,7 @@ db.run(`
 `);
 
 // Route POST pour ajouter un client
-app.post('/clients/addClient', (req, res) => {
+app.post('/clients', (req, res) => {
   const { entreprise, nom, prenom, email, telephone, commentaire } = req.body;
 
   // Vérification des champs requis
@@ -54,7 +54,7 @@ app.post('/clients/addClient', (req, res) => {
 });
 
 // Route GET pour récupérer la liste des clients
-app.get('/clients/getClients', (req, res) => {
+app.get('/clients', (req, res) => {
   const query = 'SELECT * FROM clients';
   db.all(query, function (err, rows) {
     if (err) {

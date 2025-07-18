@@ -21,7 +21,7 @@ export default function AddClientForm() {
       commentaire: commentaire || null
     };
 
-    const response = await fetch('http://localhost:3000/clients/addClient', {
+    const response = await fetch('http://localhost:3000/clients', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(clientData)

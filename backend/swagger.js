@@ -9,7 +9,7 @@ module.exports = {
     { url: "http://localhost:3000" }
   ],
   paths: {
-    "/clients/addClient": {
+    "/clients": {
       post: {
         summary: "Ajouter un client",
         requestBody: {
@@ -62,9 +62,7 @@ module.exports = {
           400: { description: "Nom et email sont requis" },
           500: { description: "Erreur serveur" }
         }
-      }
-    },
-    "/clients/getClients": {
+      },
       get: {
         summary: "Récupérer la liste des clients",
         responses: {

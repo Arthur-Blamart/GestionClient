@@ -6,7 +6,7 @@ export default function ClientsList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/clients/getClients')
+    fetch('http://localhost:3000/clients')
       .then((res) => {
         if (!res.ok) throw new Error('Erreur lors du chargement');
         return res.json();
